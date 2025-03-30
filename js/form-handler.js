@@ -2,15 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const orderForm = document.getElementById('orderForm');
     if (orderForm) {
-        // Get or initialize order number from localStorage
-        let orderNumber = localStorage.getItem('orderNumber') || 1000;
-
         orderForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Increment order number and save
-            orderNumber++;
-            localStorage.setItem('orderNumber', orderNumber);
             
             // Get form values
             const formData = {
@@ -29,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Create WhatsApp message with order number
-            const message = `*New Order #${orderNumber}*%0A%0A` +
+            // Create WhatsApp message (without order number)
+            const message = `New Design Order Inquiry%0A%0A` +
                            `*Name:* ${formData.name}%0A` +
                            `*Email:* ${formData.email}%0A` +
                            `*Phone:* ${formData.phone}%0A` +
@@ -41,14 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             window.open(`https://wa.me/917722011476?text=${message}`, '_blank');
             
-            // Show confirmation with order number
-            alert(`Order #${orderNumber} submitted! We've opened WhatsApp for you to complete the process.`);
+            // Show confirmation (without order number)
+            alert('Your order has been submitted! We\'ve opened WhatsApp for you to complete the process.');
             
             this.reset();
         });
     }
 
-    // Contact Form Handling
+    // Contact Form Handling (unchanged)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
