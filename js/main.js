@@ -129,3 +129,41 @@ if (testimonials.length) {
     showTestimonial(0);
     setInterval(nextTestimonial, 5000);
 }
+
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.querySelector('.theme-toggle input');
+  const body = document.body;
+
+  // Initialize theme
+  function initTheme() {
+    const darkThemeSelected = 
+      localStorage.getItem('theme') === 'dark' || 
+      (!localStorage.getItem('theme') && 
+       window.matchMedia('(prefers-color-scheme: dark)').matches);
+    
+    themeToggle.checked = darkThemeSelected;
+    updateTheme(darkThemeSelected);
+  }
+
+  // Update theme
+  function updateTheme(dark) {
+    if (dark) {
+      body.classList.remove('light-theme');
+      body.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      body.classList.remove('dark-theme');
+      body.classList.add('light-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  // Event listener for toggle
+  themeToggle.addEventListener('change', () => {
+    updateTheme(themeToggle.checked);
+  });
+
+  // Initialize
+  initTheme();
+});
