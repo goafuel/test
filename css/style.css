@@ -1143,24 +1143,20 @@ footer {
         height: 200px;
     }
 }
-/* ==================== */
-/* Theme System */
-/* ==================== */
-
-/* Dark Theme (Default) */
+/* Dark theme (default) */
 :root {
   --neon-purple: #E800FF;
   --neon-yellow: #FFCA00;
   --neon-cyan: #00CAFF;
   --neon-green: #00FF00;
-  --bg-primary: #121212;        /* Dark background */
-  --bg-secondary: #0a0a0a;      /* Darker elements */
-  --text-primary: #f0f0f0;      /* Light text */
-  --text-secondary: #333;       /* Dark text (for buttons) */
-  --border-color: rgba(255,255,255,0.1); /* Light borders */
+  --bg-primary: #121212;
+  --bg-secondary: #0a0a0a;
+  --text-primary: #f0f0f0;
+  --text-secondary: #333;
+  --border-color: rgba(255,255,255,0.1);
 }
 
-/* Light Theme Overrides */
+/* Light theme (optional) */
 .light-theme {
   --bg-primary: #f5f5f5;
   --bg-secondary: #e0e0e0;
@@ -1169,23 +1165,14 @@ footer {
   --border-color: rgba(0,0,0,0.1);
 }
 
-/* Apply theme variables to elements */
+/* Apply theme variables */
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar,
-.sidebar,
-.footer,
-.service-card,
-.grid-item {
-  background-color: var(--bg-secondary);
-  transition: background-color 0.3s ease;
-}
-
-/* Theme Toggle Styles */
+/* Theme toggle switch */
 .theme-toggle {
   padding: 15px 20px;
   display: flex;
