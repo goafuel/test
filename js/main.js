@@ -129,36 +129,3 @@ if (testimonials.length) {
     showTestimonial(0);
     setInterval(nextTestimonial, 5000);
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  const themeToggle = document.querySelector('.theme-toggle input');
-  const body = document.body;
-
-  // Initialize theme - dark by default
-  function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    
-    // If user previously chose light theme
-    if (savedTheme === 'light') {
-      body.classList.add('light-theme');
-      themeToggle.checked = false; // Switch position for light mode
-    }
-    // Otherwise, dark mode remains default (no class needed)
-  }
-
-  // Toggle between themes
-  themeToggle.addEventListener('change', function() {
-    if (this.checked) {
-      // Switch to dark mode
-      body.classList.remove('light-theme');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      // Switch to light mode
-      body.classList.add('light-theme');
-      localStorage.setItem('theme', 'light');
-    }
-  });
-
-  // Initialize theme on load
-  initTheme();
-});
