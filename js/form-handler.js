@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                            `*Deadline:* ${formData.deadline}%0A%0A` +
                            `*Project Details:*%0A${formData.details.replace(/\n/g, '%0A')}`;
             
-            window.open(`https://wa.me/919209933268?text=${message}`, '_blank');
+            window.open(`https://wa.me/917722011476?text=${message}`, '_blank');
             
             // Show confirmation with order number
             alert(`Order #${orderNumber} submitted! We've opened WhatsApp for you to complete the process.`);
