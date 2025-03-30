@@ -83,49 +83,50 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScroll = currentScroll;
     });
-});
-// Portfolio Filter
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-if (filterButtons.length && portfolioItems.length) {
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
-            button.classList.add('active');
-            
-            const filterValue = button.getAttribute('data-filter');
-            
-            portfolioItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
+    // Portfolio Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    if (filterButtons.length && portfolioItems.length) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
             });
         });
-    });
-}
+    }
 
-// Testimonial Slider
-const testimonials = document.querySelectorAll('.testimonial');
-if (testimonials.length) {
-    let currentTestimonial = 0;
-    
-    function showTestimonial(index) {
-        testimonials.forEach((testimonial, i) => {
-            testimonial.style.display = i === index ? 'block' : 'none';
-        });
+    // Testimonial Slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    if (testimonials.length) {
+        let currentTestimonial = 0;
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.style.display = i === index ? 'block' : 'none';
+            });
+        }
+        
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+        
+        // Initialize
+        showTestimonial(0);
+        setInterval(nextTestimonial, 5000);
     }
-    
-    function nextTestimonial() {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    }
-    
-    // Initialize
-    showTestimonial(0);
-    setInterval(nextTestimonial, 5000);
-}
+});
