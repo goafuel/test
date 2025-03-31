@@ -1190,3 +1190,73 @@ body {
     background-color: rgba(10, 10, 10, 0.8); /* Semi-transparent dark */
     backdrop-filter: blur(5px);
 }
+/* Subtle animated gradient overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(232, 0, 255, 0.1) 0%, 
+        rgba(0, 202, 255, 0.1) 50%, 
+        rgba(255, 202, 0, 0.1) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 120px 5% 60px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+/* Hero Section Adjustments */
+.page-hero {
+    padding: 120px 5% 80px; /* Reduced top padding to bring it down */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* Adjust the main content spacing */
+.main-content {
+    padding-top: 80px; /* Creates space below fixed navbar */
+}
+
+/* Specific spacing for home page */
+.index-hero {
+    padding: 60px 5% 40px; /* Even less padding for home page */
+    margin-bottom: 40px; /* Space before next section */
+}
+/* Vertical rhythm control */
+.page-hero + .quick-access {
+    margin-top: 60px; /* Space between hero and quick access */
+}
+
+.quick-access {
+    padding: 40px 5%;
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 5% 40px;
+    }
+    .page-hero + .quick-access {
+        margin-top: 40px;
+    }
+}
