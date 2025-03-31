@@ -1295,36 +1295,3 @@ select:focus {
     border-color: var(--neon-purple);
     box-shadow: 0 0 0 2px rgba(232, 0, 255, 0.2);
 }
-/* Logo positioning */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-}
-
-/* Menu button positioning */
-.sidebar-toggle {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    background: none;
-    border: none;
-    color: var(--text-primary);
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-/* Adjust main content for new header */
-.main-content {
-    padding-top: 80px;
-}
