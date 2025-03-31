@@ -1143,3 +1143,30 @@ footer {
         height: 200px;
     }
 }
+/* Fix for text visibility in page-hero */
+.page-hero {
+    padding: 180px 5% 100px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
