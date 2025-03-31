@@ -1260,3 +1260,71 @@ body::before {
         margin-top: 40px;
     }
 }
+/* Hide portfolio link in navigation */
+.sidebar-links li a[href="portfolio.html"] {
+    display: none;
+}
+
+/* Hide portfolio page completely */
+.portfolio-grid, .portfolio-filter {
+    display: none !important;
+}
+/* Fix select dropdown colors */
+select {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    border-radius: 5px;
+    width: 100%;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23E800FF' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Remove default focus outline */
+select:focus {
+    outline: none;
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 0 2px rgba(232, 0, 255, 0.2);
+}
+/* Logo positioning */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+/* Menu button positioning */
+.sidebar-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Adjust main content for new header */
+.main-content {
+    padding-top: 80px;
+}
