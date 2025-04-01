@@ -8,147 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #FF3C00; /* Main brand color */
-            --primary-dark: #D83200;
-            --primary-light: #FF5C29;
-            --dark-bg: #0F0F0F;
-            --darker-bg: #080808;
-            --text: #FFFFFF;
-            --text-secondary: #CCCCCC;
+        /* For the order form options */
+        select, .select-options {
+            background-color: #1a1a1a;
+            color: #fff;
         }
         
-        /* Global Styles */
-        body {
-            background-color: var(--dark-bg);
-            color: var(--text);
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--text);
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--primary);
-        }
-        
-        /* Navbar */
-        .navbar {
-            background-color: var(--darker-bg);
-            border-bottom: 1px solid rgba(255, 60, 0, 0.2);
-        }
-        
-        .logo-text {
-            color: var(--primary);
-            font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 1px;
-        }
-        
-        /* Buttons */
-        .btn {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 60, 0, 0.3);
+        /* Navigation buttons spacing */
+        .nav-actions {
+            display: flex;
+            gap: 10px;
         }
         
         .btn-small {
-            padding: 8px 20px;
-        }
-        
-        /* Hero Section */
-        .page-hero {
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-        }
-        
-        .neon-purple {
-            color: var(--primary);
-            text-shadow: 0 0 10px rgba(255, 60, 0, 0.5);
-        }
-        
-        .neon-yellow {
-            color: #FFD700; /* Kept for contrast */
-        }
-        
-        /* Consult Button */
-        .consult-btn {
-            background-color: var(--primary);
-            color: white;
-            border-radius: 30px;
-            padding: 12px 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 60, 0, 0.3);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .consult-btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 60, 0, 0.4);
-        }
-        
-        /* Grid Items */
-        .grid-item {
-            background-color: var(--darker-bg);
-            border: 1px solid rgba(255, 60, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .grid-item:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .neon-purple {
-            color: var(--primary);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--darker-bg);
-            border-top: 1px solid rgba(255, 60, 0, 0.2);
-        }
-        
-        .footer-section h3 {
-            color: var(--primary);
-        }
-        
-        .socials a:hover {
-            color: var(--primary);
-        }
-        
-        /* Section Titles */
-        .section-title {
-            color: var(--primary);
-        }
-        
-        /* Sidebar */
-        .sidebar {
-            background-color: var(--darker-bg);
-        }
-        
-        .sidebar-links li a:hover, 
-        .sidebar-links li a.active {
-            color: var(--primary);
-        }
-        
-        .close-sidebar:hover {
-            color: var(--primary);
+            padding: 8px 15px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -183,7 +57,8 @@
                 <span class="logo-text">Fuelerz</span>
             </div>
             <div class="nav-actions">
-                <a href="orders.html" class="btn btn-small">Order Now</a>
+                <a href="contact.html" class="btn btn-small neon-green-bg">Free Consult</a>
+                <a href="orders.html" class="btn btn-small neon-purple-bg">Order Now</a>
             </div>
         </header>
 
@@ -192,15 +67,12 @@
             <div class="hero-content">
                 <h1><span class="neon-purple">Fuel</span> Your <span class="neon-yellow">Brand</span></h1>
                 <p class="neon-cyan">Professional design solutions for businesses and creatives</p>
-                <a href="https://wa.me/917722011476?text=Hi%20Fuelerz,%20I'd%20like%20a%20free%20consultation" class="consult-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consult Now
-                </a>
             </div>
         </section>
 
         <!-- Quick Access Grid -->
         <section class="quick-access">
-            <h2 class="section-title"><span>Quick</span> Access</h2>
+            <h2 class="section-title"><span class="neon-cyan">Quick</span> Access</h2>
             <div class="grid-container">
                 <a href="orders.html" class="grid-item">
                     <i class="fas fa-shopping-cart neon-purple"></i>
@@ -208,17 +80,17 @@
                     <p>Start your design project</p>
                 </a>
                 <a href="services.html#websites" class="grid-item">
-                    <i class="fas fa-globe neon-purple"></i>
+                    <i class="fas fa-globe neon-yellow"></i>
                     <h3>Websites</h3>
                     <p>Sleek and responsive</p>
                 </a>
                 <a href="services.html#logos" class="grid-item">
-                    <i class="fas fa-palette neon-purple"></i>
+                    <i class="fas fa-palette neon-cyan"></i>
                     <h3>Logos</h3>
                     <p>Unique brand identity</p>
                 </a>
                 <a href="contact.html" class="grid-item">
-                    <i class="fas fa-headset neon-purple"></i>
+                    <i class="fas fa-headset neon-green"></i>
                     <h3>Support</h3>
                     <p>We're here to help</p>
                 </a>
