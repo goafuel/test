@@ -24,6 +24,30 @@
             padding: 8px 15px;
             font-size: 14px;
         }
+        
+        /* Remove link underlines */
+        a {
+            text-decoration: none;
+        }
+        
+        /* WhatsApp green button */
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -57,7 +81,6 @@
                 <span class="logo-text">Fuelerz</span>
             </div>
             <div class="nav-actions">
-                <a href="contact.html" class="btn btn-small neon-green-bg">Free Consult</a>
                 <a href="orders.html" class="btn btn-small neon-purple-bg">Order Now</a>
             </div>
         </header>
@@ -67,6 +90,9 @@
             <div class="hero-content">
                 <h1><span class="neon-purple">Fuel</span> Your <span class="neon-yellow">Brand</span></h1>
                 <p class="neon-cyan">Professional design solutions for businesses and creatives</p>
+                <a href="https://wa.me/917722011476" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Free WhatsApp Consultation
+                </a>
             </div>
         </section>
 
