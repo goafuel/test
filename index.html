@@ -8,33 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Additional styles for the fixes */
-        .navbar {
-            justify-content: flex-start;
-        }
-        
-        .navbar .logo-container {
-            margin-right: auto;
-        }
-        
         /* For the order form options */
         select, .select-options {
             background-color: #1a1a1a;
             color: #fff;
         }
         
-        @media (min-width: 768px) {
-            .navbar {
-                justify-content: space-between;
-            }
-            .navbar .logo-container {
-                margin-right: 0;
-                justify-content: flex-start;
-                flex-grow: 1;
-            }
-            .nav-actions {
-                order: 2;
-            }
+        /* Consult button styles */
+        .consult-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #25D366; /* WhatsApp green */
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .consult-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .consult-btn i {
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -78,6 +80,9 @@
             <div class="hero-content">
                 <h1><span class="neon-purple">Fuel</span> Your <span class="neon-yellow">Brand</span></h1>
                 <p class="neon-cyan">Professional design solutions for businesses and creatives</p>
+                <a href="https://wa.me/917722011476?text=Hi%20Fuelerz,%20I'd%20like%20a%20free%20consultation" class="consult-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Consult Now
+                </a>
             </div>
         </section>
 
