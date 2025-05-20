@@ -1,32 +1,218 @@
-<!-- Updated index.html with favicon and star-fall animation --><!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fuelerz - Professional Design Studio</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/img-logo.png">  <!-- External Stylesheets -->  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuelerz - Professional Design Studio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    /* For the order form options */
+    select, .select-options {
+        background-color: #1a1a1a;
+        color: #fff;
+    }
+    /* Navigation buttons spacing */
+    .nav-actions {
+        display: flex;
+        gap: 10px;
+    }
+    .btn-small {
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 30px;
+    }
+    /* Remove link underlines */
+    a {
+        text-decoration: none;
+    }
+    /* WhatsApp green button */
+    .whatsapp-btn {
+        background-color: #25D366;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        font-family: 'Poppins', sans-serif;
+    }
+    .whatsapp-btn:hover {
+        background-color: #128C7E;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(18, 140, 126, 0.3);
+    }
+    /* Star-fall overlay */
+    .starfall {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation-name: fall;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes fall {
+        0% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+    }
+</style>
+
 </head>
 <body>
-  <!-- Starfall container (positioned absolute) -->
-  <div class="starfall"></div>  <!-- Sidebar Navigation -->  <div class="sidebar">
-    <!-- ... existing sidebar ... -->
-  </div>  <!-- Main Content -->  <div class="main-content">
+    <!-- Starfall effect -->
+    <div class="starfall"></div><!-- Sidebar Navigation -->
+<div class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+            <span class="logo-text">Fuelerz</span>
+        </div>
+        <button class="close-sidebar"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="sidebar-links">
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="services.html"><i class="fas fa-laptop-code"></i> Services</a></li>
+        <li><a href="portfolio.html"><i class="fas fa-images"></i> Portfolio</a></li>
+        <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Top Navigation -->
+    <header class="navbar">
+        <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+            <span class="logo-text">Fuelerz</span>
+        </div>
+        <div class="nav-actions">
+            <a href="orders.html" class="btn btn-small neon-purple-bg">Order Now</a>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="page-hero index-hero">
-      <div class="hero-content">
-        <h1><span class="neon-purple">Fuel</span> Your <span class="neon-yellow">Brand</span></h1>
-        <p class="neon-cyan">Professional design solutions for businesses and creatives</p>
-        <a href="https://wa.me/917722011476" target="_blank" class="whatsapp-btn">
-          <i class="fab fa-whatsapp"></i> CONSULT NOW
-        </a>
-      </div>
-    </section><!-- ... other sections ... -->
+        <div class="hero-content">
+            <h1><span class="neon-purple">Fuel</span> Your <span class="neon-yellow">Brand</span></h1>
+            <p class="neon-cyan">Professional design solutions for businesses and creatives</p>
+            <a href="https://wa.me/917722011476" target="_blank" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i>CONSULT NOW</a>
+        </div>
+    </section>
 
-<footer>
-  <!-- ... existing footer ... -->
-</footer>
+    <!-- Quick Access Grid -->
+    <section class="quick-access">
+        <h2 class="section-title"><span class="neon-cyan">Quick</span> Access</h2>
+        <div class="grid-container">
+            <a href="orders.html" class="grid-item">
+                <i class="fas fa-shopping-cart neon-purple"></i>
+                <h3>Place Order</h3>
+                <p>Start your design project</p>
+            </a>
+            <a href="services.html#websites" class="grid-item">
+                <i class="fas fa-globe neon-yellow"></i>
+                <h3>Websites</h3>
+                <p>Sleek and responsive</p>
+            </a>
+            <a href="services.html#logos" class="grid-item">
+                <i class="fas fa-palette neon-cyan"></i>
+                <h3>Logos</h3>
+                <p>Unique brand identity</p>
+            </a>
+            <a href="contact.html" class="grid-item">
+                <i class="fas fa-headset neon-green"></i>
+                <h3>Support</h3>
+                <p>We're here to help</p>
+            </a>
+        </div>
+    </section>
 
-  </div>  <!-- Scripts -->  <script src="js/main.js"></script></body>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Fuelerz</h3>
+                <p>Professional design solutions tailored to your vision.</p>
+                <div class="socials">
+                    <a href="https://instagram.com/fuelerzgoa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/917722011476" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:fuelerzgoa@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone-alt"></i> 7722011476</p>
+                <p><i class="fas fa-envelope"></i> fuelerzgoa@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Goa, India</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fuelerz. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+// STAR-FALL EFFECT
+(function() {
+  const container = document.querySelector('.starfall');
+  const maxStars = 80;
+  const spawnInterval = 400;
+  function createStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    const size = Math.random() * 2 + 1;
+    star.style.width = star.style.height = size + 'px';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    star.style.animationDelay = '-' + (Math.random() * 6) + 's';
+    container.appendChild(star);
+    setTimeout(() => star.remove(), 10000);
+  }
+  for (let i = 0; i < maxStars; i++) createStar();
+  setInterval(createStar, spawnInterval);
+})();
+</script>
+
+</body>
 </html>
