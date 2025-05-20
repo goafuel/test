@@ -130,3 +130,34 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(nextTestimonial, 5000);
     }
 });
+
+// STAR-FALL EFFECT
+(function() {
+  const container = document.querySelector('.starfall');
+  const maxStars = 80;      // how many initial stars
+  const spawnInterval = 400; // ms between new stars
+
+  function createStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    // randomize size
+    const size = Math.random() * 2 + 1; // 1px–3px
+    star.style.width = star.style.height = size + 'px';
+    // random horizontal start
+    star.style.left = Math.random() * 100 + '%';
+    // random speed between 3s–6s
+    star.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    // random negative delay so they’re already falling on load
+    star.style.animationDelay = '-' + (Math.random() * 6) + 's';
+    container.appendChild(star);
+    // remove after its animation finishes (~max 9s)
+    setTimeout(() => star.remove(), 10000);
+  }
+
+  // create initial batch
+  for (let i = 0; i < maxStars; i++) {
+    createStar();
+  }
+  // keep spawning
+  setInterval(createStar, spawnInterval);
+})();
