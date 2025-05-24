@@ -3,31 +3,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fuelerz - Professional Design Studio</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/img-logo.png">
-    <link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-    /* For the order form options */
-    select, .select-options {
-        background-color: #1a1a1a;
-        color: #fff;
-    }
-    /* Navigation buttons spacing */
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* For the order form options */
+        select, .select-options {
+            background-color: #1a1a1a;
+            color: #fff;
+        }/* Navigation buttons spacing */
     .nav-actions {
         display: flex;
         gap: 10px;
     }
+
     .btn-small {
         padding: 8px 15px;
         font-size: 14px;
         border-radius: 30px;
     }
+
     /* Remove link underlines */
     a {
         text-decoration: none;
     }
+
     /* WhatsApp green button */
     .whatsapp-btn {
         background-color: #25D366;
@@ -42,12 +43,14 @@
         transition: all 0.3s ease;
         font-family: 'Poppins', sans-serif;
     }
+
     .whatsapp-btn:hover {
         background-color: #128C7E;
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(18, 140, 126, 0.3);
     }
-    /* Star-fall overlay */
+
+    /* Starfall overlay */
     .starfall {
         position: fixed;
         top: 0;
@@ -63,39 +66,11 @@
         background: white;
         border-radius: 50%;
         opacity: 0.8;
-        animation-name: fall;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        animation: fall linear infinite;
     }
     @keyframes fall {
-        0% {
-            transform: translateY(-10px);
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(100vh);
-            opacity: 0;
-        }
-    }
-</style>
-<!-- Starfall CSS -->
-<style>
-    .star {
-        position: fixed;
-        top: -10px;
-        width: 2px;
-        height: 80px;
-        background: white;
-        opacity: 0.5;
-        animation: fall linear forwards;
-        z-index: 9999;
-    }
-
-    @keyframes fall {
-        to {
-            transform: translateY(100vh);
-            opacity: 0;
-        }
+        0% { transform: translateY(-10px); opacity: 1; }
+        100% { transform: translateY(100vh); opacity: 0; }
     }
 </style>
 
@@ -212,26 +187,26 @@
 </div>
 
 <script src="js/main.js"></script>
+<!-- Starfall Script -->
 <script>
-// STAR-FALL EFFECT
-(function() {
-  const container = document.querySelector('.starfall');
-  const maxStars = 80;
-  const spawnInterval = 400;
-  function createStar() {
-    const star = document.createElement('div');
-    star.classList.add('star');
-    const size = Math.random() * 2 + 1;
-    star.style.width = star.style.height = size + 'px';
-    star.style.left = Math.random() * 100 + '%';
-    star.style.animationDuration = (Math.random() * 3 + 3) + 's';
-    star.style.animationDelay = '-' + (Math.random() * 6) + 's';
-    container.appendChild(star);
-    setTimeout(() => star.remove(), 10000);
-  }
-  for (let i = 0; i < maxStars; i++) createStar();
-  setInterval(createStar, spawnInterval);
-})();
+    (function() {
+      const container = document.querySelector('.starfall');
+      const maxStars = 80;
+      const spawnInterval = 400;
+      function createStar() {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        const size = Math.random() * 2 + 1;
+        star.style.width = star.style.height = size + 'px';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        star.style.animationDelay = '-' + (Math.random() * 6) + 's';
+        container.appendChild(star);
+        setTimeout(() => star.remove(), 10000);
+      }
+      for (let i = 0; i < maxStars; i++) createStar();
+      setInterval(createStar, spawnInterval);
+    })();
 </script>
 
 </body>
