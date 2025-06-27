@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Support | Fuelerz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/neon-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="circuit-bg" aria-hidden="true"></div>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+                <span class="logo-text neon-text">Fuelerz</span>
+            </div>
+            <button class="close-sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-laptop-code"></i> Services</a></li>
+            <li><a href="portfolio.html"><i class="fas fa-images"></i> Portfolio</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="support.html" class="active"><i class="fas fa-headset"></i> Support</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <header class="navbar">
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+                <span class="logo-text neon-text">Fuelerz</span>
+            </div>
+            <div class="nav-actions">
+                <a href="orders.html" class="btn btn-small neon-btn">Order Now</a>
+            </div>
+        </header>
+
+        <!-- Support Hero -->
+        <section class="page-hero neon-bg">
+            <div class="hero-content">
+                <h1 class="neon-text"><span class="neon-purple">Customer</span> <span class="neon-yellow">Support</span></h1>
+                <p class="neon-cyan">We're here to help with any questions or issues</p>
+            </div>
+        </section>
+
+        <!-- Support Content -->
+        <section class="support-content neon-bg" style="margin-top:2em;">
+            <div class="container">
+                <div class="faq-section">
+                    <h2 class="neon-text neon-green">Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item neon-bg">
+                        <button class="faq-question neon-btn">How long does a typical project take? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Project timelines vary based on complexity. Simple logo designs typically take 3-5 business days, while complete websites may take 2-4 weeks. We'll provide a specific timeline after discussing your project requirements.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item neon-bg">
+                        <button class="faq-question neon-btn">Can I request revisions? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Absolutely! We provide multiple rounds of revisions depending on your project scope to ensure you’re fully satisfied.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item neon-bg">
+                        <button class="faq-question neon-btn">How do I pay for my project? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>We accept digital payments, bank transfer, and UPI. Payment details will be shared after you place your order.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item neon-bg">
+                        <button class="faq-question neon-btn">Who owns the final designs? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Once full payment is received, you own all rights to the delivered designs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="support-contact" style="margin-top:2em;">
+                    <h2 class="neon-text neon-yellow">Still need help?</h2>
+                    <p>Contact our team directly:</p>
+                    <a href="mailto:contact@fuelerz.com" class="neon-btn">Email Support</a>
+                    <a href="https://wa.me/917722011476" class="neon-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Support</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/circuit-bg.js"></script>
+    <script>
+      // FAQ toggle
+      document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('.faq-question').forEach(function(btn) {
+              btn.addEventListener('click', function() {
+                  let answer = btn.nextElementSibling;
+                  if (answer.style.display === 'block') {
+                      answer.style.display = 'none';
+                  } else {
+                      answer.style.display = 'block';
+                  }
+              });
+          });
+      });
+    </script>
+</body>
+</html>

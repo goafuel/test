@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order | Fuelerz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/neon-order.css"><!-- NEW THEME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation (unchanged) -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+                <span class="logo-text neon-text">Fuelerz</span>
+            </div>
+            <button class="close-sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-laptop-code"></i> Services</a></li>
+            <li><a href="portfolio.html"><i class="fas fa-images"></i> Portfolio</a></li>
+            <li><a href="orders.html" class="active"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <header class="navbar">
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+                <span class="logo-text neon-text">Fuelerz</span>
+            </div>
+            <div class="nav-actions">
+                <a href="orders.html" class="btn btn-small neon-btn">Order Now</a>
+            </div>
+        </header>
+
+        <!-- Order Form Section -->
+        <section class="order-form neon-bg">
+            <div class="container">
+                <h2 class="section-title neon-text">Place Your <span class="neon-yellow">Order</span></h2>
+                <p class="subtitle neon-cyan">Fill out the form below and we'll get back to you within 24 hours</p>
+                
+                <form id="orderForm" autocomplete="off">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service *</label>
+                            <select id="service" name="service" class="neon-select" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="web-design">Web Design</option>
+                                <option value="logo-design">Logo Design</option>
+                                <option value="branding">Branding</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="print">Print Design</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget">Budget *</label>
+                            <select id="budget" name="budget" class="neon-select" required>
+                                <option value="" disabled selected>Select budget</option>
+                                <option value="under-10k">Under 10,000 INR</option>
+                                <option value="10k-25k">10,000 - 25,000 INR</option>
+                                <option value="25k-50k">25,000 - 50,000 INR</option>
+                                <option value="over-50k">Over 50,000 INR</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline">Deadline</label>
+                            <input type="date" id="deadline" name="deadline">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="details">Project Details *</label>
+                            <textarea id="details" name="details" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="cta-btn neon-btn">Submit Order</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>

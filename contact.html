@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Us | Fuelerz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/neon-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="circuit-bg" aria-hidden="true"></div>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+                <span class="logo-text neon-text">Fuelerz</span>
+            </div>
+            <button class="close-sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-laptop-code"></i> Services</a></li>
+            <li><a href="portfolio.html"><i class="fas fa-images"></i> Portfolio</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <header class="navbar">
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+                <span class="logo-text neon-text">Fuelerz</span>
+            </div>
+            <div class="nav-actions">
+                <a href="orders.html" class="btn btn-small neon-btn">Order Now</a>
+            </div>
+        </header>
+
+        <!-- Contact Hero -->
+        <section class="page-hero neon-bg">
+            <div class="hero-content">
+                <h1 class="neon-text"><span class="neon-purple">Contact</span> <span class="neon-yellow">Us</span></h1>
+                <p class="neon-cyan">Get in touch for inquiries, support, or collaborations</p>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid neon-bg" style="margin-top:2em;">
+                    <div class="contact-info">
+                        <h2 class="neon-text neon-green">Let's Talk</h2>
+                        <p>Have questions about our services? Want to discuss a project? Reach out through any of these channels:</p>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt neon-purple"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Goa, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt neon-yellow"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+91 7722 011 476</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope neon-cyan"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>contact@fuelerz.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-area">
+                        <form id="contactForm" autocomplete="off" class="neon-bg" style="padding:2em;border-radius:18px;">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-btn neon-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/circuit-bg.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio | Fuelerz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/neon-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="circuit-bg" aria-hidden="true"></div>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+                <span class="logo-text neon-text">Fuelerz</span>
+            </div>
+            <button class="close-sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-laptop-code"></i> Services</a></li>
+            <li><a href="portfolio.html" class="active"><i class="fas fa-images"></i> Portfolio</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <header class="navbar">
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Fuelerz Logo" class="logo-img">
+                <span class="logo-text neon-text">Fuelerz</span>
+            </div>
+            <div class="nav-actions">
+                <a href="orders.html" class="btn btn-small neon-btn">Order Now</a>
+            </div>
+        </header>
+
+        <!-- Portfolio Hero -->
+        <section class="page-hero neon-bg">
+            <div class="hero-content">
+                <h1 class="neon-text"><span class="neon-purple">Our</span> <span class="neon-yellow">Portfolio</span></h1>
+                <p class="neon-cyan">Showcasing our best work for local businesses</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Filter -->
+        <section class="portfolio-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="logo">Logo Design</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                    <button class="filter-btn" data-filter="print">Print Design</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="portfolio-grid">
+            <div class="container">
+                <div class="grid">
+                    <div class="portfolio-item neon-bg" data-category="web">
+                        <img src="assets/images/portfolio/web1.jpg" alt="Website Design">
+                        <div class="overlay">
+                            <h3>Restaurant Website</h3>
+                            <p>Full responsive website with online ordering</p>
+                            <a href="#" class="btn btn-small neon-btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item neon-bg" data-category="logo">
+                        <img src="assets/images/portfolio/logo1.jpg" alt="Logo Design">
+                        <div class="overlay">
+                            <h3>Cafe Logo</h3>
+                            <p>Modern logo for a specialty coffee shop</p>
+                            <a href="#" class="btn btn-small neon-btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item neon-bg" data-category="branding">
+                        <img src="assets/images/portfolio/branding1.jpg" alt="Branding">
+                        <div class="overlay">
+                            <h3>Circuit Branding</h3>
+                            <p>Brand identity inspired by neon and tech</p>
+                            <a href="#" class="btn btn-small neon-btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item neon-bg" data-category="print">
+                        <img src="assets/images/portfolio/print1.jpg" alt="Print Design">
+                        <div class="overlay">
+                            <h3>Promo Flyer</h3>
+                            <p>Vibrant print material for marketing</p>
+                            <a href="#" class="btn btn-small neon-btn">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Add more portfolio items as needed -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/circuit-bg.js"></script>
+</body>
+</html>
