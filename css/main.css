@@ -1,0 +1,105 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #101522 0%, #151a28 100%);
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5vw;
+}
+
+.logo {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #00ffe7;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 10vh;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-desc {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 2.5rem 0;
+  color: #b3b3b3;
+}
+
+.cta-btn, .neon-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff00ea 0%, #00cfff 50%, #00ff95 100%);
+  color: #fff;
+  text-shadow: 0 0 8px #00ffe7;
+  box-shadow: 0 0 24px #00ffe7, 0 0 48px #ff00ea;
+  transition: background 0.3s, box-shadow 0.2s;
+}
+.cta-btn:hover, .neon-btn:hover {
+  background: linear-gradient(90deg, #00ff95, #ff00ea, #ffe600);
+  box-shadow: 0 0 32px #ffe600, 0 0 64px #00cfff;
+}
+
+.neon-text {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff00ea 0%, #00cfff 30%, #00ff95 70%, #ffe600 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 16px #00ffe7) drop-shadow(0 0 32px #ff00ea);
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.circuit-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: transparent;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .neon-text { font-size: 2.2rem; }
+  .hero-desc { font-size: 1rem; }
+  .cta-btn, .neon-btn { font-size: 1rem; padding: 0.8rem 1.5rem; }
+  nav { flex-direction: column; gap: 1rem; }
+}

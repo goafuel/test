@@ -1,0 +1,160 @@
+/* NEON THEME FOR ORDER FORM */
+
+/* Neon background for order form section */
+.order-form.neon-bg {
+    background: linear-gradient(135deg, #101522 0%, #151a28 100%);
+    border-radius: 24px;
+    box-shadow: 0 0 60px 4px #00ffe7;
+    margin-top: 32px;
+    padding-bottom: 48px;
+}
+
+/* Neon text for section titles */
+.section-title.neon-text {
+    font-size: 2.4rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff00ea, #00cfff, #00ff95, #ffe600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px #00ffe7) drop-shadow(0 0 16px #ff00ea);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.2em;
+}
+
+/* Neon accent for subtitle */
+.subtitle.neon-cyan {
+    color: #00ffe7;
+    filter: drop-shadow(0 0 6px #00ffe7);
+    margin-bottom: 2em;
+}
+
+/* Neon button style */
+.neon-btn {
+    background: linear-gradient(90deg, #ff00ea, #00cfff, #00ff95, #ffe600);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 32px;
+    padding: 1rem 3rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    box-shadow: 0 0 24px #ff00ea, 0 0 48px #00cfff;
+    transition: background 0.3s, box-shadow 0.2s;
+}
+.neon-btn:hover,
+.neon-btn:focus {
+    background: linear-gradient(90deg, #00ff95, #ff00ea, #ffe600);
+    box-shadow: 0 0 36px #ffe600, 0 0 72px #00cfff;
+}
+
+/* Neon select styles (fixes white/invisible options bug) */
+.neon-select,
+.order-form select {
+    background: #151a28;
+    color: #fff;
+    border: 1.5px solid #00ffe7;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #00ffe7;
+    outline: none;
+    padding: 12px 16px;
+    font-size: 1rem;
+    appearance: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    margin-bottom: 0.5em;
+    position: relative;
+    z-index: 2;
+}
+.neon-select:focus,
+.order-form select:focus {
+    border-color: #ff00ea;
+    box-shadow: 0 0 12px #ff00ea;
+}
+
+/* Style dropdown arrow for select */
+.neon-select::-ms-expand,
+.order-form select::-ms-expand {
+    display: none;
+}
+.neon-select option,
+.order-form select option {
+    background: #22263b;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    font-size: 1rem;
+    text-shadow: 0 0 8px #00ffe7;
+}
+.neon-select option:checked,
+.order-form select option:checked {
+    background: #00ffe7;
+    color: #0a0a12;
+    font-weight: bold;
+}
+
+/* For accessibility, highlight selected option on hover */
+.neon-select option:hover,
+.order-form select option:hover {
+    background: #ff00ea !important;
+    color: #fff !important;
+}
+
+/* Neon input/textarea styling */
+.order-form input,
+.order-form textarea {
+    background: #191b2a;
+    color: #fff;
+    border: 1.5px solid #00ffe7;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    box-shadow: 0 0 8px #00ffe7;
+    transition: border 0.2s, box-shadow 0.2s;
+    margin-bottom: 1em;
+}
+.order-form input:focus,
+.order-form textarea:focus {
+    border-color: #ff00ea;
+    box-shadow: 0 0 12px #ff00ea;
+}
+
+.order-form label {
+    font-weight: 600;
+    color: #00ffe7;
+    text-shadow: 0 0 4px #00ffe7;
+}
+
+.order-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 1.6em;
+}
+.order-form .form-group {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Full width group */
+.order-form .form-group.full-width {
+    flex: 0 0 100%;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+    .order-form .form-row {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .order-form.neon-bg {
+        padding: 1.5em 0.4em;
+    }
+    .section-title.neon-text {
+        font-size: 1.4rem;
+    }
+}
+
+/* Glow effect for "neon-yellow" text */
+.neon-yellow {
+    color: #ffe600;
+    filter: drop-shadow(0 0 8px #ffe600);
+}
