@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place an Order | Fuelerz</title>
+  <link rel="icon" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Fuelerz Logo" class="logo-img"/>
+      <span class="logo-text">Fuelerz</span>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="about.html">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html#story">Our Story</a></li>
+            <li><a href="about.html#mission">Mission</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#websites">Websites</a></li>
+            <li><a href="services.html#logos">Logos</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="orders.html" class="btn neon-purple-bg">Order Now</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1><span class="page-title">Place Your Order</span></h1>
+      <p class="page-subtitle">Let's bring your vision to life</p>
+    </div>
+  </section>
+
+  <!-- Ordering Info -->
+  <section class="main-content">
+    <div class="container">
+      <h2 class="section-title"><span class="neon-yellow">How</span> It Works</h2>
+      <p class="summary">Fill out the form below and we'll contact you to discuss your project.</p>
+      <button class="details-toggle btn neon-purple-bg">View Details</button>
+      <div class="details-panel">
+        <ul>
+          <li>Step 1: Submit your project details</li>
+          <li>Step 2: We'll review and send you a quote</li>
+          <li>Step 3: Start your project with our team</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form -->
+  <section class="main-content">
+    <div class="container">
+      <h2 class="section-title"><span class="neon-cyan">Order</span> Form</h2>
+      <form action="form-handler.js" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="service" placeholder="Service You Need" required />
+        <textarea name="details" placeholder="Project Details" rows="5" required></textarea>
+        <button type="submit" class="btn neon-green-bg">Submit Order</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Fuelerz</h3>
+        <p>Professional design solutions tailored to your vision.</p>
+        <div class="socials">
+          <a href="https://instagram.com/fuelerzgoa"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/917722011476"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:fuelerzgoa@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><i class="fas fa-phone"></i> 7722011476</p>
+        <p><i class="fas fa-envelope"></i> fuelerzgoa@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Goa, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fuelerz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
